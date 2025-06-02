@@ -82,3 +82,11 @@ Connect to overthewire's ssh server using there ssh information-
   sort data.txt | uniq -u
 ```
 
+## LEVEL 9 -> LEVEL 10
+
+- sort readable data in data.txt and search for '=='
+
+```bash
+  strings data.txt | grep "="
+```
+

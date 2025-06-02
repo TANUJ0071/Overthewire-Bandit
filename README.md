@@ -1,4 +1,4 @@
-# Overthewire--Bandit
+# Overthewire-[Bandit]
 OverTheWire.org provides interactive wargames to learn and practice cybersecurity skills. Challenges like Bandit help users master Linux commands, networking, and more through hands-on problem-solving.
 
 
@@ -84,9 +84,53 @@ Connect to overthewire's ssh server using there ssh information-
 
 ## LEVEL 9 -> LEVEL 10
 
-- sort readable data in data.txt and search for '=='
+- sort readable data in data.txt and search for '='
 
 ```bash
   strings data.txt | grep "="
 ```
 
+## LEVEL 10 -> LEVEL 11
+
+- open file & decode base64
+
+```bash
+  cat data.txt | base64 -d
+```
+
+## LEVEL 11 -> LEVEL 12
+
+- open file and rotate data by 13 using website **rot13.com**
+
+```bash
+  cat data.txt
+```
+```bash
+  https://rot13.com/
+```
+
+## LEVEL 12 -> LEVEL 13
+
+- change directory to /tmp
+- make new directory
+- check zip type and unzip till password found
+
+```bash
+  cat data.txt | cd tmp | mkdir <name> | cd | cp data.txt /tmp/<name> | cd /tmp/<name> | ls | cat data.txt | xxd -r > <name> | file <name> | mv <name> <name>.gz | gzip -d <name>.gz | mv <name> <name>.bz2 | bzip2 -d <name>.bz2 | mv <name> <name>.gz | gzip -d <name>.gz |  tar -xvf <name> | tar -xvf data5.bin | mv data6.bin data6.bin.bz2 | bzip2 -d data6.bin.bz2 | tar -xvf data6.bin | mv data8.bin data8.bin.gz | gzip -d data8.bin.gz | cat data8.bin
+```
+
+## LEVEL 13 -> LEVEL 14
+
+- use ssh key to login with username **bandit14**
+
+```bash
+  ssh bandit14@localhost -p 2220 -i sshkey.private
+```
+
+## LEVEL 14 -> LEVEL 15
+
+- open file **/etc/bandit_pass/bandit14**
+
+```bash
+  cd .. | cd .. | cat /etc/bandit_pass/bandit14
+```

@@ -66,3 +66,9 @@ Connect to overthewire's ssh server using there ssh information-
   find / -user bandit7 -group bandit6 -size 33c 2>/dev/null && cat var/lib/dpkg/info/bandit7.password
 ```
 
+- open data.txt & find word 'millionth'
+
+```bash
+  cat data.txt | grep "millionth"
+````
+

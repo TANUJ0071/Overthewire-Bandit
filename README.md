@@ -10,7 +10,7 @@ Connect to overthewire's ssh server using there ssh information-
 
 ## LEVEL 0 -> LEVEL 1
 
-Open the file called readme
+- Open the file called readme
 
 ```bash
   cat readme
@@ -18,7 +18,7 @@ Open the file called readme
 
 ## LEVEL 1 -> LEVEL 2
 
-Open a bash file
+- Open a bash file
 
 ```bash
   cat ./-
@@ -26,7 +26,7 @@ Open a bash file
 
 ## LEVEL 2 -> LEVEL 3
 
-Open a file with spaces using ""
+- Open a file with spaces using ""
 
 ```bash
   cat "spaces in this filename"
@@ -34,7 +34,7 @@ Open a file with spaces using ""
 
 ## LEVEL 3 -> LEVEL 4
 
-Change directory and use find command
+- Change directory & use find command
 
 ```bash
   cd inhere && find | cat ./...Hiding-From-You
@@ -42,7 +42,7 @@ Change directory and use find command
 
 ## LEVEL 4 -> LEVEL 5
 
-Scan all available files and check type for readable file
+- Scan all available files & check type for readable file
  
 ```bash
   for i in $(ls); do file ./$i; done | cat ./-file07
@@ -50,8 +50,8 @@ Scan all available files and check type for readable file
 
 ## LEVEL 5 -> LEVEL 6
 
-Change directory 
-Find readable file with size 1033byte & not executable 
+- Change directory 
+- Find readable file with size 1033byte & not executable 
 
 ```bash
   cd inhere | find . -readable -size 1033c ! -executable && cat ./inhere/maybehere07/.file2

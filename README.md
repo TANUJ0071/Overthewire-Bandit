@@ -48,3 +48,12 @@ Scan all available files and check type for readable file
   for i in $(ls); do file ./$i; done | cat ./-file07
 ```
 
+## LEVEL 5 -> LEVEL 6
+
+Change directory 
+Find readable file with size 1033byte & not executable 
+
+```bash
+  cd inhere | find . -readable -size 1033c ! -executable && cat ./inhere/maybehere07/.file2
+```
+

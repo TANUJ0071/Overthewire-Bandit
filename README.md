@@ -57,3 +57,12 @@ Connect to overthewire's ssh server using there ssh information-
   cd inhere | find . -readable -size 1033c ! -executable && cat ./inhere/maybehere07/.file2
 ```
 
+## LEVEL 6 -> LEVEL 7
+
+- Find file with owner bandit7 & group bandit6
+- size 33byte
+
+```bash
+  find / -user bandit7 -group bandit6 -size 33c 2>/dev/null && cat var/lib/dpkg/info/bandit7.password
+```
+
